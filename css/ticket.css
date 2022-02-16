@@ -37,6 +37,11 @@ th.precio {
     align-content: center;
 }
 
+.right {
+  
+    align-content: right;
+}
+
 .ticket {
     width: 155px;
     max-width: 155px;
