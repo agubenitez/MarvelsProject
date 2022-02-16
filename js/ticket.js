@@ -150,12 +150,12 @@ function imprimir() {
 
 
 function showTicket() {
-
+    let date = new Date();
     let htmlContentToAppend = "";
     for (let i = 0; i < currentTicket.length; i++) {
         let ticket = currentTicket[i];
         htmlContentToAppend +=
-            `
+            `            
     <tr>
     <td class="cantidad">`+ cant + `</td>
     <td class="producto">`+ ticket.burguer.name + `   <br> ` + ticket.notas + `  </td>
@@ -173,6 +173,7 @@ function showTicket() {
     }
 
     tbody.innerHTML = htmlContentToAppend;
+    document.getElementById("fecha").innerHTML = ` <small>`+ date.getDate() + `-` + (parseInt(date.getMonth())+1)  + `-` + date.getFullYear() + ` ` + date.getHours() + `:` + date.getMinutes() + `:` + date.getSeconds() + `</small>`
     total = sumarTotal(currentTicket)
 
     trTotal.innerHTML = `
