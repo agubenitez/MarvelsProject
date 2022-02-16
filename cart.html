@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+  <link href="css/dropzone.css" rel="stylesheet">
+  <script src="js/cart.js"></script>
+</head>
+
+<body>
+  <nav id="nav" class="site-header sticky-top py-1 bg-dark">
+  </nav>
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+   
+          <h5 class="modal-title" id="exampleModalLabel">Forma de pago</h5>
+        
+
+          
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="modalBody" class="modal-body">
+      
+          <div class="form-check form-check-inline">
+            <input onchange="payCredit()" class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">Credito/Debito</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input onchange="payBank()" class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">Transferencia bancaria</label>
+          </div>
+    <div id="payment" class="container ">
+   
+    
+    </div>
+        <!-- Fin del container -->
+        
+        </div>  
+  </div> 
+      </div>
+     
+    </div>
+
+
+
+  <div class="container p-5 mt-5 border bg-light">
+    <div class="row">
+<div class="col mr-2">
+
+  <div class="fs-2 mb-3">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mb-2 mr-2 bi bi-cart4" viewBox="0 0 16 16">
+<path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+</svg>
+   Tu carrito:
+  </div>
+</div>
+<div  class="col">
+  <div style="float:right">
+
+  <button  onclick="pasarDolar()" type="button" class="btn btn-info">Dolar</button>
+  <button  onclick="pasarPeso()" type="button" class="btn btn-info">Peso Uruguayo</button>
+
+</div>
+</div>
+    </div>
+
+<!-- LISTA DE ARTICULOS -->
+    <div class="row border bg-white">
+      <div class="col border p-5">
+        <ul id="cartListId">
+        </ul>
+        <div class="row">
+          <div class="col mr-2 mt-2">
+            <div  id="subTotalDiv">
+
+            </div>
+          </div>
+        </div>
+        <div class="row">
+         
+          <div class="col ml-5">
+            <strong>Tipo de envio:</strong>
+            <div class="form-check">
+              <input class="form-check-input" onchange="costoEnvio(0)" type="radio" name="flexRadioDefault" id="defRadio" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                Retiro en el local - Gratis
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" onchange="costoEnvio(1)" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+               Premium(2-5 dias) - Costo del 15% sobre el subtotal
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" onchange="costoEnvio(2)" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Express(5-8 dias) - Costo del 7% sobre el subtotal
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input"  onchange="costoEnvio(3)" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+               Standard(12-15 dias) - costo del 5% sobre el subtotal
+              </label>
+            </div>
+          </div>
+       
+         
+        </div>
+
+        <div id="dirEnvio" style="display: none;" class="row mt-5 ">
+          <div class="col-3 "></div>
+         <div class="col-6 ">
+          
+          <div class="col text-center">
+            <h3>Direccion de envio</h3>
+          </div>
+          
+         <div class="col-md-6 mx-auto">
+            Calle: <input id="calleEnvio" type="text">
+          </div>
+          <div class="col-md-6 mx-auto">
+            Numero: <input id="numeroEnvio" type="text">
+          </div>
+          <div class="col-md-6 mx-auto">
+            Esquina: <input type="text">
+          </div>
+             
+        </div>
+        <div class="col-3 "></div>
+
+      </div>
+        <!-- Total y boton pagar -->
+        <div class="row mt-4  text-center">
+          <div class="col-md-4"></div>
+          <div class="col border-success border rounded mt-4 ">
+            <div id="totalDiv">
+            </div>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+
+        <div class="row text-center mt-4">
+          <div class="col-md-4"></div>
+          <div class="col-md-4 ">
+            
+        <!-- Button trigger modal -->
+            <button id="btnPagar" type="button" class="btn btn-primary" data-toggle="modal"  data-target="#exampleModal">
+              Pagar</button>
+
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+
+
+
+        
+        <!-- Fin total y boton pagar -->
+    
+      </div>
+    </div>
+<!-- fin lista de articulos -->
+
+
+</div>
+
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/dropzone.js"></script>
+  <script src="js/init.js"></script>
+ 
+</body>
+
+</html>

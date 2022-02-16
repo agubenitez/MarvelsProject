@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/ticket.css">
+        </head>
+    <body>
+        <!-- TICKET -->
+        <div class="ticket ">
+            <img
+                src="img/logoMarvel.jpg"
+                alt="Logotipo">
+                <div id="divCliente">
+                <p id="parrafoDir" class="centrado">
+                    </p>
+                   <p id="parrafoNombre" class="centrado">
+                    </p>
+                   <p id="parrafoTelefono" class="centrado">
+                    </p>
+                </div>
+            <p class="centrado">
+                07/09/2021 21:22:03</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="cantidad">CANT</th>
+                        <th class="producto">PRODUCTO</th>
+                        <th class="precio">$$</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+
+
+               </tbody>
+
+               <tfoot>
+
+
+                <tr id="total">
+
+                </tr>
+
+
+               </tfoot>
+            </table>
+            <p class="centrado">¡GRACIAS POR SU COMPRA!</p>
+
+        </div>
+        <!-- FIN TICKET -->
+
+
+<!-- CREAR TICKET -->
+<div>
+<button class="oculto-impresion" onclick="imprimir()">Imprimir</button>
+<button class="oculto-impresion" id="nuevo">Nuevo ticket</button>
+<!-- <button class="oculto-impresion" id="botonUltimoTicket">Ultimo Ticket</button> -->
+</div>
+<div class="oculto-impresion" style="display: inline-flex;margin-top: 4%;">
+  
+    <div  class="pedido">
+    <span style="font-size:16px">ID BURGUER:</span>
+    <!-- <input style="height: 20px;" id="idProd" type="text"> -->
+    <select id="idProd">
+       
+      </select>
+    <textarea id="inputNotas" class="form-control" aria-label="With textarea" placeholder="NOTAS..."></textarea>
+    <button id="agregar">Agregar</button>
+    </div>
+
+   <div  class="pedido">
+
+    <span style="font-size:16px">DIRECCION:</span>
+    <input id="inputDir" type="text"> <button id="botonDir">Agregar</button>
+</div>
+
+<div class="pedido" >  
+<span style="font-size:16px">TELEFONO:</span>
+    <input id="inputTelefono" type="text"> <button id="botonTelefono">Agregar</button>
+</div>   
+<div class="pedido" > 
+    <span style="font-size:16px">NOMBRE:</span>
+    <input id="inputNombre" type="text"> <button id="botonNombre">Agregar</button>
+</div>
+
+</div>
+
+<!-- FIN CREAR TICKET -->
+
+
+<script src="js/ticket.js" defer></script>
+</body>
+
+</html>
