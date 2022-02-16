@@ -8,6 +8,7 @@ var divCliente = document.getElementById("divCliente");
 var currentDire = "";
 var currentTel = "";
 var currentNombre = ""
+var descuento = 0;
 var currentCliente =
 {
     "nombre": "",
@@ -139,6 +140,34 @@ var burguers = [
         "cost": 0,
         "costInterface": "15%",
         "currency": "$"
+        
+    },
+    {
+        "name": "Envio $30",
+        "id": "e30",
+        "description": "",
+        "cost": 30,
+        "costInterface": "30",
+        "currency": "$"
+        
+    },
+    {
+        "name": "Envio $50",
+        "id": "e50",
+        "description": "",
+        "cost": 50,
+        "costInterface": "50",
+        "currency": "$"
+        
+    },
+    {
+        "name": "Envio $70",
+        "id": "e70",
+        "description": "",
+        "cost": 70,
+        "costInterface": "70",
+        "currency": "$"
+        
     },
 
 ]
@@ -238,6 +267,7 @@ function agregarProd(id, notas) {
 
 function sumarTotal(array) {
     var total = 0
+    
     for (let i = 0; i < array.length; i++) {
         var a = array[i]
         var costo = parseInt(a.burguer.cost)
@@ -245,9 +275,13 @@ function sumarTotal(array) {
 
         if (a.burguer.id == "d") {
 
+            descuento = total -  Math.round(total * 0.85);
+           
+
             total = Math.round(total * 0.85)
                   
         }
+        console.log(descuento)
     }
     return (total);
 
