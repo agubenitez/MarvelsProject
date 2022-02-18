@@ -89,16 +89,16 @@ var burguers = [
         "name": "Bravas",
         "id": "pbr",
         "description": "",
-        "cost": 300,
-        "costInterface": 300,
+        "cost": 320,
+        "costInterface": 320,
         "currency": "$"
     },
     {
         "name": "Aros",
         "id": "par",
         "description": "",
-        "cost": 300,
-        "costInterface": 300,
+        "cost": 325,
+        "costInterface": 325,
         "currency": "$"
     },
     {
@@ -129,8 +129,8 @@ var burguers = [
         "name": "lata",
         "id": "lata",
         "description": "",
-        "cost": 50,
-        "costInterface": 50,
+        "cost": 75,
+        "costInterface": 75,
         "currency": "$"
     },
     {
