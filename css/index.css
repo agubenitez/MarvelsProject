@@ -1,0 +1,33 @@
+
+body {
+    background-image: url(../img/fondo.png);
+}
+#header{
+    height:170px;
+     width: 100%;
+
+       margin-bottom: 1px;
+}
+#banner{
+    height:270px;
+     
+     background-image: url(../img/banner.png);
+     background-repeat: no-repeat;
+       margin-left: 15%;
+       margin-right: 10%;
+       margin-top: 1%;
+
+}
+#content{
+   
+}
+
+#footer{
+    height:370px;
+     
+     background-image: url(../img/Footer.png);
+     background-repeat: no-repeat;
+       margin-left: 15%;
+       margin-right: 10%;
+
+}
