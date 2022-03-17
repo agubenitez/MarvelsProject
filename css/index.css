@@ -1,6 +1,19 @@
-
+.test{
+  background-color: blue; 
+  opacity:50%;
+}
+.test2{
+  background-color: red; 
+  opacity:50%;
+}
 body {
-    background-image: url(../img/fondo.png);
+
+background-image: url(../img/fondo2.png);
+   
+
+
+
+  
 }
 #header{
     height:170px;
@@ -9,13 +22,22 @@ body {
        margin-bottom: 1px;
 }
 #banner{
-    height:270px;
+    
      
      background-image: url(../img/banner.png);
      background-repeat: no-repeat;
-       margin-left: 15%;
+
+       margin-left: 10%;
        margin-right: 10%;
-       margin-top: 1%;
+       margin-top: 3%;
+
+}
+#bannersm{
+    
+
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
 
 }
 #content{
