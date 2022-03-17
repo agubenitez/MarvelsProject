@@ -8,7 +8,7 @@
 }
 body {
 
-background-image: url(../img/fondo2.png);
+background-image: url(../img/fondo.png);
    
 
 
@@ -40,9 +40,8 @@ background-image: url(../img/fondo2.png);
     margin-top: 3%;
 
 }
-#content{
-   
-}
+
+
 
 #footer{
     height:370px;
